@@ -97,6 +97,8 @@ export interface ModifiableWatchQueryOptions<TVariables = OperationVariables>
    * Whether or not updates to the network status should trigger next on the observer of this query
    */
   notifyOnNetworkStatusChange?: boolean;
+
+  returnPartialData?: boolean;
 }
 
 /**

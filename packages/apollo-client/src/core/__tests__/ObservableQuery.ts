@@ -705,7 +705,7 @@ describe('ObservableQuery', () => {
             dataOne,
           );
           observable.setVariables(differentVariables);
-          expect(observable.getCurrentResult().data).toEqual(undefined);
+          expect(observable.getCurrentResult().data).toEqual({});
           expect(observable.getCurrentResult().loading).toBe(true);
         }
         // after loading is false and data has returned
@@ -772,7 +772,7 @@ describe('ObservableQuery', () => {
             dataOne,
           );
           await observable.setVariables(differentVariables);
-          expect(observable.getCurrentResult().data).toEqual(undefined);
+          expect(observable.getCurrentResult().data).toEqual({});
           expect(observable.getCurrentResult().loading).toBe(true);
         }
         // after loading is false and data has returned
@@ -1350,7 +1350,7 @@ describe('ObservableQuery', () => {
 
       expect(observable.getCurrentResult()).toEqual({
         loading: true,
-        data: undefined,
+        data: {},
         networkStatus: 1,
         partial: true,
       });
@@ -1358,7 +1358,7 @@ describe('ObservableQuery', () => {
         wrap(done, () => {
           expect(observable.getCurrentResult()).toEqual({
             loading: true,
-            data: undefined,
+            data: {},
             networkStatus: 1,
             partial: true,
           });
